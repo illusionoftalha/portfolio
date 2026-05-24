@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheikh Muhammad Talha Bin Khalid | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a robust grotesque font similar to Magma's typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&display=swap" rel="stylesheet">
+    <!-- Lenis for smooth scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.1/dist/lenis.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Film Grain Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-counter">0%</div>
+    </div>
+
+    <!-- WebGL/Canvas Background (Scrubbed on scroll) -->
+    <canvas id="magma-canvas"></canvas>
+
+    <!-- Main Scroll Container -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Navbar -->
+            <nav class="magma-nav">
+                <div class="logo">TALHA.</div>
+                <div class="nav-links">
+                    <a href="#expertise">Expertise</a>
+                    <a href="#works">Works</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+
+            <!-- Section 1: Hero Pin -->
+            <section class="hero-pin" id="hero">
+                <div class="hero-text-container">
+                    <h1 class="huge-text hero-title">
+                        <div class="text-line">SHEIKH</div>
+                        <div class="text-line outlined">MUHAMMAD</div>
+                        <div class="text-line">TALHA</div>
+                    </h1>
+                    <p class="hero-subtext">Expert WordPress Developer & Full Stack Engineer.</p>
+                </div>
+                <div class="scroll-down">SCROLL TO EXPLORE</div>
+            </section>
+
+            <!-- Section 2: Expertise / Storytelling (Canvas scrub area) -->
+            <section class="expertise-story" id="expertise">
+                <div class="story-container">
+                    <div class="story-left">
+                        <p class="section-label">01 / EXPERTISE</p>
+                        <h2 class="story-heading">Architecting<br>Digital<br>Twins</h2>
+                    </div>
+                    <div class="story-right">
+                        <p class="story-p">I build robust WordPress ecosystems and high-performance Web Applications. Bridging the gap between complex backend PHP/Java logic and bleeding-edge frontend experiences.</p>
+                        <p class="story-p">Since late 2018, I have been delivering solutions that scale, perform, and captivate.</p>
+                    </div>
+                </div>
+                
+                <!-- Large sticky text revealing on scroll -->
+                <div class="sticky-text-wrapper">
+                    <div class="skills-sequence">
+                        <h1 class="massive-sticky-text skill-item">WORDPRESS.</h1>
+                        <h1 class="massive-sticky-text skill-item">PHP.</h1>
+                        <h1 class="massive-sticky-text skill-item">JAVASCRIPT.</h1>
+                        <h1 class="massive-sticky-text skill-item">JAVA.</h1>
+                        <h1 class="massive-sticky-text skill-item">.NET.</h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Horizontal Scroll Gallery -->
+            <section class="horizontal-scroll-section" id="works">
+                <p class="section-label sticky-label">02 / SELECTED WORKS</p>
+                <div class="horizontal-container">
+                    
+                    <a href="https://thewildwearable.com/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">01</div>
+                        <h2 class="typo-title">THE WILD WEARABLE</h2>
+                        <div class="typo-info">
+                            <p>Premium Project</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+
+                    <a href="http://wheeltick.com/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">02</div>
+                        <h2 class="typo-title">WHEELTICK</h2>
+                        <div class="typo-info">
+                            <p>WordPress Development</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://quizsite-chi.vercel.app/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">03</div>
+                        <h2 class="typo-title">QUIZ SITE</h2>
+                        <div class="typo-info">
+                            <p>Custom Web App</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+                    
+                    <a href="http://marinechecker.com/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">04</div>
+                        <h2 class="typo-title">MARINE CHECKER</h2>
+                        <div class="typo-info">
+                            <p>WordPress Portal</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://clipzolounge.com/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">05</div>
+                        <h2 class="typo-title">CLIPZO LOUNGE</h2>
+                        <div class="typo-info">
+                            <p>Premium Web Application</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+                    
+                    <a href="http://pureziaorganics.com/" target="_blank" class="horizontal-item typo-item">
+                        <div class="typo-number">06</div>
+                        <h2 class="typo-title">PUREZIA ORGANICS</h2>
+                        <div class="typo-info">
+                            <p>WordPress E-Commerce</p>
+                            <span class="typo-arrow">↗</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Section 4: Experience Timeline -->
+            <section class="experience-section" id="experience">
+                <div class="exp-bg-elements">
+                    <div class="glow-orb red-orb"></div>
+                    <div class="glow-orb red-orb-bottom"></div>
+                </div>
+                
+                <div class="exp-header">
+                    <p class="section-label sticky-label-exp">03 / EXPERIENCE</p>
+                    <h2 class="story-heading">My Journey</h2>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line">
+                        <div class="timeline-progress"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="exp-card">
+                            <div class="exp-card-inner">
+                                <div class="exp-year-watermark">2019</div>
+                                <div class="exp-content">
+                                    <p class="exp-duration">MAR 2019 - JAN 2020</p>
+                                    <h3 class="exp-company">DigiTech</h3>
+                                    <p class="exp-role">Jr. Website Developer</p>
+                                    <p class="exp-desc">Developed and maintained WordPress websites. Customized themes, configured plugins, and assisted in building responsive, mobile-friendly web pages.</p>
+                                    <div class="exp-tech-stack">
+                                        <span>WordPress</span><span>PHP</span><span>HTML5</span><span>CSS3</span>
+                                    </div>
+                                </div>
+                                <div class="exp-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="exp-card">
+                            <div class="exp-card-inner">
+                                <div class="exp-year-watermark">2020</div>
+                                <div class="exp-content">
+                                    <p class="exp-duration">2020 - 2023</p>
+                                    <h3 class="exp-company">Lamhe Production</h3>
+                                    <p class="exp-role">Internee</p>
+                                    <p class="exp-desc">Assisted in developing dynamic interfaces, contributing to team projects, and gaining hands-on experience with modern frontend workflows.</p>
+                                    <div class="exp-tech-stack">
+                                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="exp-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="exp-card">
+                            <div class="exp-card-inner">
+                                <div class="exp-year-watermark">2023</div>
+                                <div class="exp-content">
+                                    <p class="exp-duration">DEC 2023 - FEB 2026</p>
+                                    <h3 class="exp-company">Quantum Code Labs</h3>
+                                    <p class="exp-role">Co-Founder, COO & Website Developer</p>
+                                    <p class="exp-desc">Co-founded the software company, overseeing operations. Led website development projects, delivering robust WordPress-based solutions for clients.</p>
+                                    <div class="exp-tech-stack">
+                                        <span>WordPress</span><span>PHP</span><span>Operations</span><span>Management</span>
+                                    </div>
+                                </div>
+                                <div class="exp-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: White Text Masking Area -->
+            <section class="text-reveal-section">
+                <div class="reveal-content">
+                    <h2 class="reveal-text">Building<br>The Future<br>Of Web.</h2>
+                    <div class="reveal-subtext">
+                        <p>With a focus on performance, aesthetics, and user experience, I craft digital solutions that stand out.</p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-num">50+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">100%</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">6+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Reveal (Curtain effect) -->
+            <footer class="magma-footer" id="contact">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h2 class="footer-heading">HAVE AN<br>IDEA?</h2>
+                        <div class="contact-info-premium">
+                            <a href="tel:+923212746218" class="magnetic-link">03212746218</a>
+                            <a href="mailto:muhammadtalhabinkhalid@gmail.com" class="magnetic-link">MUHAMMADTALHABINKHALID@GMAIL.COM</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-right">
+                        <form id="myContactForm" class="premium-form">
+                            <!-- Disable FormSubmit Captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="WHAT IS YOUR NAME?" required>
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS?" required>
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="input-group">
+                                <textarea name="message" placeholder="TELL ME ABOUT YOUR PROJECT." required></textarea>
+                                <span class="input-line"></span>
+                            </div>
+                            <button type="submit" class="premium-submit">
+                                <span class="circle"></span>
+                                <span class="text">SEND IT</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-wrapper">
+                    <div class="footer-socials">
+                        <a href="https://github.com/illusionoftalha" target="_blank" class="magnetic-link">GITHUB</a>
+                        <a href="https://www.behance.net/sheikhmuhammadtalha" target="_blank" class="magnetic-link">BEHANCE</a>
+                        <a href="https://leetcode.com/u/sonneteertalha/" target="_blank" class="magnetic-link">LEETCODE</a>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>© 2026 SHEIKH MUHAMMAD TALHA BIN KHALID</p>
+                        <p>USMAN INSTITUTE OF TECHNOLOGY</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Success Popup Overlay -->
+    <div class="success-popup">
+        <div class="popup-glow"></div>
+        <div class="popup-content">
+            <div class="popup-icon">
+                <!-- SVG Checkmark -->
+                <svg viewBox="0 0 50 50" class="checkmark">
+                    <circle cx="25" cy="25" r="23" fill="none" class="check-circle"/>
+                    <path d="M15 25 l7 7 l15 -15" fill="none" class="check-path"/>
+                </svg>
+            </div>
+            <h2 class="popup-heading">TRANSMISSION<br><i>SUCCESSFUL</i></h2>
+            <p class="popup-text">Your coordinates have been logged. I will reach out shortly.</p>
+            <button class="popup-close">
+                <span class="close-line"></span>
+                <span class="close-text">RETURN</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Lenis for smooth scroll -->
+    <script src="https://unpkg.com/lenis@1.1.1/dist/lenis.min.js"></script>
+    <!-- GSAP Core & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
