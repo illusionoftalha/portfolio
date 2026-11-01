@@ -62,10 +62,21 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
 const canvas = document.getElementById('magma-canvas');
 const ctx = canvas.getContext('2d');
 let width, height;
+let gridPath;
 
 function resizeCanvas() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
+    // The grid changes only on resize, so reuse its geometry for every frame.
+    gridPath = new Path2D();
+    for (let x = 0; x < width; x += 50) {
+        gridPath.moveTo(x, 0);
+        gridPath.lineTo(x, height);
+    }
+    for (let y = 0; y < height; y += 50) {
+        gridPath.moveTo(0, y);
+        gridPath.lineTo(width, y);
+    }
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
@@ -106,12 +117,7 @@ function drawMagma() {
     // Add subtle grid overlay
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)';
     ctx.lineWidth = 1;
-    for(let i=0; i<width; i+=50) {
-        ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, height); ctx.stroke();
-    }
-    for(let j=0; j<height; j+=50) {
-        ctx.beginPath(); ctx.moveTo(0, j); ctx.lineTo(width, j); ctx.stroke();
-    }
+    ctx.stroke(gridPath);
 
     phase += 0.005 + (scrollProgress * 0.02); // Speeds up on scroll
     requestAnimationFrame(drawMagma);
